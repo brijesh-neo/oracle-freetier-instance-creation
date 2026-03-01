@@ -1,8 +1,6 @@
 name: Oracle ARM Instance Creator
 
 on:
-  schedule:
-    - cron: '*/10 * * * *'  # runs every 10 minutes
   workflow_dispatch:  # allows manual trigger
 
 jobs:
