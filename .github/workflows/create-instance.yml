@@ -20,6 +20,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Create symlink to fake ubuntu home
+        run: |
+          sudo mkdir -p /home/ubuntu
+          sudo ln -s /home/runner/work/oracle-freetier-instance-creation/oracle-freetier-instance-creation /home/ubuntu/oracle-freetier-instance-creation
+
       - name: Create OCI config
         run: |
           mkdir -p /home/runner/work/oracle-freetier-instance-creation/oracle-freetier-instance-creation
